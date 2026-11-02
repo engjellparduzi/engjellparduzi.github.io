@@ -1,1 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Engjell Parduzi | E-Commerce Live Chat Support & Appointment Setting</title>
+
+    <meta name="description"
+          content="Engjell Parduzi - Remote E-Commerce Live Chat Support, Order & Refund Specialist, and Appointment Setter available for US Evening Shifts (4 PM - 9 PM EST).">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0b0f;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(11, 11, 15, 0.94);
+            border-bottom: 1px solid #222;
+            backdrop-filter: blur(8px);
+        }
+
+        .nav-container {
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #8b5cf6;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: #7c3aed;
+            opacity: 0.12;
+            filter: blur(120px);
+            border-radius: 50%;
+            top: -150px;
+            right: -100px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            position: relative;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid #333;
+            border-radius: 30px;
+            padding: 7px 15px;
+            color: #d4d4d8;
+            font-size: 13px;
+            margin-bottom: 25px;
+            background: #111116;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px #22c55e;
+        }
+
+        .hero h1 {
+            font-size: clamp(44px, 7.5vw, 78px);
+            line-height: 1.02;
+            letter-spacing: -3px;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 span {
+            color: #8b5cf6;
+        }
+
+        .hero p {
+            color: #aaa;
+            font-size: 18px;
+            max-width: 700px;
+            margin-bottom: 32px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 21px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .primary {
+            background: #8b5cf6;
+            color: white;
+        }
+
+        .primary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .secondary {
+            border: 1px solid #333;
+        }
+
+        .secondary:hover {
+            background: #17171c;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 90px 0;
+            border-top: 1px solid #202024;
+        }
+
+        .label {
+            color: #8b5cf6;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: clamp(32px, 5vw, 50px);
+            letter-spacing: -2px;
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            color: #999;
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .about-text p {
+            color: #aaa;
+            margin-bottom: 18px;
+        }
+
+        .info-box {
+            background: #111116;
+            border: 1px solid #27272d;
+            border-radius: 14px;
+            padding: 25px;
+        }
+
+        .info {
+            padding: 15px 0;
+            border-bottom: 1px solid #25252a;
+        }
+
+        .info:last-child {
+            border-bottom: none;
+        }
+
+        .info small {
+            display: block;
+            color: #777;
+            margin-bottom: 4px;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            background: #111116;
+            border: 1px solid #27272d;
+            border-radius: 14px;
+            padding: 25px;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: #3b3b45;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* WHY HIRE ME */
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .why-card {
+            background: #111116;
+            border: 1px solid #27272d;
+            border-radius: 14px;
+            padding: 24px;
+        }
+
+        .why-card .icon {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .why-card h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .why-card p {
+            color: #999;
+            font-size: 13px;
+        }
+
+        /* CASE STUDIES */
+
+        .case {
+            background: #111116;
+            border: 1px solid #27272d;
+            border-radius: 14px;
+            padding: 28px;
+        }
+
+        .case-number {
+            color: #8b5cf6;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .case h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .case p {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .response {
+            border-left: 2px solid #8b5cf6;
+            padding-left: 14px;
+            color: #ddd;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .tags {
+            display: flex;
+            gap: 7px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            border: 1px solid #333;
+            padding: 5px 9px;
+            border-radius: 20px;
+            color: #aaa;
+            font-size: 11px;
+        }
+
+        /* TOOLS */
+
+        .tools {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tool {
+            background: #111116;
+            border: 1px solid #29292f;
+            border-radius: 8px;
+            padding: 10px 14px;
+            color: #bbb;
+            font-size: 14px;
+        }
+
+        /* EDUCATION */
+
+        .education-card {
+            background: #111116;
+            border: 1px solid #27272d;
+            border-radius: 14px;
+            padding: 25px;
+            margin-bottom: 15px;
+        }
+
+        .education-card p {
+            color: #999;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .contact p {
+            color: #999;
+            margin-bottom: 25px;
+        }
+
+        .email {
+            display: inline-block;
+            color: #8b5cf6;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 30px 0;
+            border-top: 1px solid #222;
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 700px) {
+            .nav-links {
+                display: none;
+            }
+
+            .about-grid,
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">
+                Engjell<span>.</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#why">Why Me</a></li>
+                <li><a href="#support">Support Cases</a></li>
+                <li><a href="#appointment">Appointment Setting</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+        <div class="container hero-content">
+
+            <div class="badge">
+                <span class="status-dot"></span>
+                Available for US Evening Shifts (4:00 PM – 9:00 PM EST / 10:00 PM – 3:00 AM CET)
+            </div>
+
+            <h1>
+                E-Commerce Live Chat<br>
+                <span>& Customer Support.</span>
+            </h1>
+
+            <p>
+                I help online brands and remote teams resolve order inquiries,
+                process refunds, de-escalate frustrated customers, and book
+                qualified appointments—covering evening and late-night hours
+                5 days a week.
+            </p>
+
+            <div class="buttons">
+                <a href="#support" class="button primary">
+                    View Support Cases
+                </a>
+
+                <a href="#contact" class="button secondary">
+                    Hire Me for Evening Shifts
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+        <div class="container">
+
+            <div class="label">
+                About Me
+            </div>
+
+            <h2>
+                Dedicated evening coverage.<br>
+                Fast, policy-driven resolutions.
+            </h2>
+
+            <div class="about-grid">
+
+                <div class="about-text">
+                    <p>
+                        I'm a Computer Engineering and Software student specializing
+                        in remote E-Commerce Live Chat Support, Order & Refund
+                        Management, and Outbound/Inbound Appointment Setting.
+                    </p>
+
+                    <p>
+                        With a strong technical background, I navigate helpdesk
+                        platforms, carrier tracking portals, and order management
+                        systems quickly—handling WISMO ("Where Is My Order") tickets,
+                        returns, replacements, and refund requests strictly according
+                        to company SOPs.
+                    </p>
+
+                    <p>
+                        I am available 5 days a week from 10:00 PM to 3:00 AM CET,
+                        making me a reliable fit for US afternoon/evening coverage
+                        (4:00 PM – 9:00 PM EST) when fast live-chat response times
+                        directly protect store conversion rates and customer retention.
+                    </p>
+                </div>
+
+                <div class="info-box">
+                    <div class="info">
+                        <small>Core Focus</small>
+                        Live Chat Support · Order & Refund Handling · Appointment Setting
+                    </div>
+
+                    <div class="info">
+                        <small>Shift Availability</small>
+                        10:00 PM – 3:00 AM CET (4:00 PM – 9:00 PM EST) · 5 Days/Week
+                    </div>
+
+                    <div class="info">
+                        <small>Education</small>
+                        B.Sc. in Computer & Software Engineering
+                    </div>
+
+                    <div class="info">
+                        <small>Languages</small>
+                        English (Proficient Written & Spoken) · Albanian (Native)
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- WHY HIRE ME -->
+
+    <section id="why">
+        <div class="container">
+
+            <div class="label">
+                Why Hire Me
+            </div>
+
+            <h2>
+                Fast response times.<br>
+                Zero-friction support.
+            </h2>
+
+            <p class="description">
+                Every live chat interaction is an opportunity to save a sale,
+                prevent a chargeback, and turn a frustrated buyer into a repeat customer.
+            </p>
+
+            <div class="why-grid">
+
+                <div class="why-card">
+                    <div class="icon">⚡</div>
+                    <h3>Tech-Savvy Speed</h3>
+                    <p>
+                        As a software engineering student, I master helpdesk
+                        macros, Shopify workflows, and CRM tools rapidly.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <div class="icon">💬</div>
+                    <h3>Clear Live Chat Tone</h3>
+                    <p>
+                        Empathetic, concise, and solution-oriented written English
+                        tailored for real-time chat and email tickets.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <div class="icon">🛡️</div>
+                    <h3>SOP & Refund Accuracy</h3>
+                    <p>
+                        Strict adherence to return windows, warranty policies,
+                        partial credits, and supervisor escalation rules.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <div class="icon">🌙</div>
+                    <h3>US Evening Coverage</h3>
+                    <p>
+                        Consistent 5-day/week availability during peak US
+                        evening shopping hours (4 PM – 9 PM EST).
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section>
+        <div class="container">
+
+            <div class="label">
+                Core Capabilities
+            </div>
+
+            <h2>
+                What I handle daily.
+            </h2>
+
+            <p class="description">
+                Practical workflows focused on e-commerce ticket resolution,
+                customer retention, and lead qualification.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Order & Refund Management</h3>
+                    <p>
+                        Checking fulfillment statuses, investigating carrier delays,
+                        processing full/partial refunds, exchanges, and store credits.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Live Chat & Ticket Triage</h3>
+                    <p>
+                        Managing multi-chat queues with fast first-response times,
+                        accurate tagging, macro customization, and clean escalations.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>De-Escalation & Retention</h3>
+                    <p>
+                        Calming frustrated customers, offering policy-compliant
+                        alternatives, and preventing negative reviews or chargebacks.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Appointment Setting & Qualification</h3>
+                    <p>
+                        Engaging inbound and outbound leads via chat/DM, uncovering
+                        pain points, overcoming objections, and booking calendar demos.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CUSTOMER SUPPORT CASES -->
+
+    <section id="support">
+        <div class="container">
+
+            <div class="label">
+                Customer Support Portfolio
+            </div>
+
+            <h2>
+                E-Commerce Ticket Resolutions.
+            </h2>
+
+            <p class="description">
+                Sample live-chat and helpdesk responses demonstrating order
+                verification, refund execution, policy adherence, and de-escalation.
+            </p>
+
+            <div class="cards">
+
+                <div class="case">
+                    <div class="case-number">
+                        CASE 01 · WISMO & CARRIER DELAY RESOLUTION
+                    </div>
+
+                    <h3>Delayed Shipment Inquiry</h3>
+
+                    <p>
+                        A customer reached out on live chat concerned that their
+                        order had not arrived within the standard 5-day shipping window.
+                    </p>
+
+                    <div class="response">
+                        "Hi Sarah! I just checked Order #4829 in our system and verified
+                        the live carrier scan—your package experienced a 48-hour weather
+                        delay at the regional hub and is now scheduled for delivery this
+                        Thursday. Here is your direct tracking link, and I've just issued
+                        a 10% shipping refund ($6.50) back to your card for the wait!"
+                    </div>
+
+                    <div class="tags">
+                        <span class="tag">Order Lookup</span>
+                        <span class="tag">Partial Refund</span>
+                        <span class="tag">Proactive Update</span>
+                    </div>
+                </div>
+
+                <div class="case">
+                    <div class="case-number">
+                        CASE 02 · DAMAGED ITEM & WARRANTY CLAIM
+                    </div>
+
+                    <h3>Defective Product Refund</h3>
+
+                    <p>
+                        A customer sent a photo of an item damaged in transit and
+                        requested an immediate refund within the 30-day policy window.
+                    </p>
+
+                    <div class="response">
+                        "Hi Marcus, thank you for attaching the photo of the damaged item—I'm
+                        so sorry it arrived in that condition. Since your order is within our
+                        30-day protection window, I have just processed a full refund of $49.99
+                        to your original payment method (appearing in 3–5 business days), and
+                        there is no need to ship the damaged item back."
+                    </div>
+
+                    <div class="tags">
+                        <span class="tag">Policy Verification</span>
+                        <span class="tag">Full Refund Processed</span>
+                        <span class="tag">First-Contact Resolution</span>
+                    </div>
+                </div>
+
+                <div class="case">
+                    <div class="case-number">
+                        CASE 03 · DE-ESCALATION & OUT-OF-POLICY REQUEST
+                    </div>
+
+                    <h3>Frustrated Customer (Past Return Window)</h3>
+
+                    <p>
+                        An upset customer demanded a refund 45 days after delivery
+                        and was frustrated by a delay in previous email replies.
+                    </p>
+
+                    <div class="response">
+                        "Hi David, I completely understand why you're frustrated after waiting
+                        on a previous reply, and I'm taking ownership of your ticket right now.
+                        While orders past our 30-day window aren't eligible for a card refund
+                        in our system, I can issue a 100% instant store credit ($64.00) today
+                        or escalate this directly to my supervisor for a manual exception review—which
+                        would you prefer?"
+                    </div>
+
+                    <div class="tags">
+                        <span class="tag">De-escalation</span>
+                        <span class="tag">Store Credit Retention</span>
+                        <span class="tag">Tier-2 Escalation</span>
+                    </div>
+                </div>
+
+                <div class="case">
+                    <div class="case-number">
+                        CASE 04 · ORDER MODIFICATION & CANCELLATION SAVE
+                    </div>
+
+                    <h3>Wrong Size Ordered Before Fulfillment</h3>
+
+                    <p>
+                        A buyer asked to cancel their entire order 20 minutes after
+                        checkout because they selected the wrong size by mistake.
+                    </p>
+
+                    <div class="response">
+                        "Hi Elena! Since your order #5104 hasn't been packed by our warehouse
+                        yet, you don't need to cancel and re-order. I have just updated the
+                        item on your order from Size S to Size M directly in Shopify and sent
+                        an updated confirmation to your email—your shipment will still go out
+                        on time today!"
+                    </div>
+
+                    <div class="tags">
+                        <span class="tag">Shopify Order Edit</span>
+                        <span class="tag">Cancellation Save</span>
+                        <span class="tag">Live Chat Speed</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- APPOINTMENT SETTING -->
+
+    <section id="appointment">
+        <div class="container">
+
+            <div class="label">
+                Appointment Setting
+            </div>
+
+            <h2>
+                Turning conversations<br>
+                into booked calls.
+            </h2>
+
+            <p class="description">
+                Structured chat and DM workflows focused on rapid lead qualification,
+                identifying business bottlenecks, and booking calendar consultations.
+            </p>
+
+            <div class="cards">
+
+                <div class="case">
+                    <div class="case-number">
+                        CASE 01 · OUTBOUND DISCOVERY TO BOOKED DEMO
+                    </div>
+
+                    <h3>Cold Lead → Qualified Appointment</h3>
+
+                    <p>
+                        A local service owner was missing inbound customer calls
+                        while on job sites, losing bookings to competitors.
+                    </p>
+
+                    <div class="response">
+                        "Totally makes sense—when you're on a job site, picking up every call
+                        is impossible. Our automated booking system texts missed callers back
+                        within 30 seconds and lets them lock in a time slot on your calendar.
+                        Are you open to a quick 10-minute walkthrough this Thursday at 4 PM EST
+                        so we can show you how it works?"
+                    </div>
+
+                    <div class="tags">
+                        <span class="tag">Discovery</span>
+                        <span class="tag">Pain Point Framing</span>
+                        <span class="tag">Calendar Close</span>
+                    </div>
+                </div>
+
+                <div class="case">
+                    <div class="case-number">
+                        CASE 02 · PRICE OBJECTION & VALUE FRAMING
+                    </div>
+
+                    <h3>Price Hesitation → Consultation</h3>
+
+                    <p>
+                        A salon owner expressed interest in automated reminders
+                        but hesitated due to monthly software costs.
+                    </p>
+
+                    <div class="response">
+                        "I completely understand—you shouldn't add a monthly expense unless
+                        it pays for itself. Most studios cover the entire monthly cost by
+                        preventing just two no-shows a month. Let's hop on a brief 10-minute
+                        call tomorrow so we can calculate your exact no-show recovery before
+                        you decide anything—does 5 PM EST work?"
+                    </div>
+
+                    <div class="tags">
+                        <span class="tag">Objection Handling</span>
+                        <span class="tag">ROI Positioning</span>
+                        <span class="tag">Low-Friction Booking</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- TOOLS -->
+
+    <section id="tools">
+        <div class="container">
+
+            <div class="label">
+                Tools & Platforms
+            </div>
+
+            <h2>
+                Ready for your stack.
+            </h2>
+
+            <p class="description">
+                Helpdesk, e-commerce, and productivity tools I use to manage
+                customer tickets, order workflows, and team communication.
+            </p>
+
+            <div class="tools">
+                <div class="tool">Shopify Admin</div>
+                <div class="tool">Gorgias</div>
+                <div class="tool">Zendesk</div>
+                <div class="tool">Tidio Live Chat</div>
+                <div class="tool">Intercom</div>
+                <div class="tool">Slack</div>
+                <div class="tool">Gmail & Google Workspace</div>
+                <div class="tool">Google Sheets & Excel</div>
+                <div class="tool">CRM & Ticketing Workflows</div>
+                <div class="tool">AI Support Copilots</div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section>
+        <div class="container">
+
+            <div class="label">
+                Education
+            </div>
+
+            <h2>
+                Academic Background.
+            </h2>
+
+            <div class="education-card">
+                <h3>
+                    B.Sc. in Computer Engineering & Software
+                </h3>
+                <p>
+                    Undergraduate Student · Kosovo
+                </p>
+            </div>
+
+            <div class="education-card">
+                <h3>
+                    Gymnasium — Natural Sciences
+                </h3>
+                <p>
+                    Completed
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+        <div class="container">
+
+            <div class="contact">
+
+                <div class="label">
+                    Contact
+                </div>
+
+                <h2>
+                    Need reliable evening coverage?
+                </h2>
+
+                <p>
+                    Available 5 days/week from 10:00 PM – 3:00 AM CET (4:00 PM – 9:00 PM EST)
+                    for part-time remote Live Chat Support, Order/Refund Management,
+                    or Appointment Setting.
+                </p>
+
+                <a
+                    href="mailto:engjullparduzi531@gmail.com"
+                    class="email">
+                    engjullparduzi531@gmail.com
+                </a>
+
+                <br>
+
+                <a
+                    href="mailto:engjullparduzi531@gmail.com"
+                    class="button primary">
+                    Email Me Directly
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        © 2026 Engjell Parduzi · E-Commerce Live Chat Support & Appointment Setting
+    </footer>
+
+</body>
+</html>
